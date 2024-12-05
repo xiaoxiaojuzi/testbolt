@@ -1,0 +1,17 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import SignInForm from '../components/SignInForm.astro';
+---
+
+<MainLayout title="Sign In">
+  <div class="max-w-md mx-auto">
+    <h1 class="text-3xl font-bold text-center text-gray-900 mb-8">Sign In</h1>
+    <SignInForm />
+    <p class="mt-4 text-center text-sm text-gray-600">
+      Don't have an account?
+      <a href="/signup" class="text-indigo-600 hover:text-indigo-500">
+        Sign up here
+      </a>
+    </p>
+  </div>
+</MainLayout>

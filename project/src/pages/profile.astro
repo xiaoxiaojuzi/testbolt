@@ -1,0 +1,18 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import ProfileCard from '../components/ProfileCard.astro';
+
+// In a real application, you would fetch this from your auth system
+const user = {
+  name: "John Doe",
+  email: "john@example.com",
+  createdAt: new Date().toISOString()
+};
+---
+
+<MainLayout title="Profile">
+  <div class="max-w-md mx-auto">
+    <h1 class="text-3xl font-bold text-center text-gray-900 mb-8">Your Profile</h1>
+    <ProfileCard user={user} />
+  </div>
+</MainLayout>

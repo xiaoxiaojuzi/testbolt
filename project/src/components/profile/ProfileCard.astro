@@ -1,0 +1,31 @@
+---
+import Avatar from './Avatar.astro';
+import ProfileInfo from './ProfileInfo.astro';
+
+interface Props {
+  user: {
+    name: string;
+    email: string;
+    createdAt: string;
+  };
+}
+
+const { user } = Astro.props;
+---
+
+<div class="bg-white shadow rounded-lg p-6 max-w-md mx-auto">
+  <div class="text-center">
+    <Avatar />
+    <h2 class="text-xl font-semibold text-gray-900">{user.name}</h2>
+    <p class="text-gray-500">{user.email}</p>
+  </div>
+  
+  <div class="mt-6 border-t border-gray-200 pt-4">
+    <dl class="divide-y divide-gray-200">
+      <ProfileInfo 
+        label="Account created" 
+        value={new Date(user.createdAt).toLocaleDateString()} 
+      />
+    </dl>
+  </div>
+</div>

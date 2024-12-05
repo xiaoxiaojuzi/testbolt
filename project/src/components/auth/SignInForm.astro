@@ -1,0 +1,22 @@
+---
+import InputField from '../forms/InputField.astro';
+import SubmitButton from '../forms/SubmitButton.astro';
+---
+
+<form class="space-y-6 max-w-md mx-auto" action="/api/auth/signin" method="POST">
+  <InputField
+    label="Email address"
+    type="email"
+    name="email"
+    id="email"
+    required={true}
+  />
+  <InputField
+    label="Password"
+    type="password"
+    name="password"
+    id="password"
+    required={true}
+  />
+  <SubmitButton text="Sign in" />
+</form>

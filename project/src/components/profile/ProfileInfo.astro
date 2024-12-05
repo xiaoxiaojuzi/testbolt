@@ -1,0 +1,13 @@
+---
+interface Props {
+  label: string;
+  value: string;
+}
+
+const { label, value } = Astro.props;
+---
+
+<div class="py-3 flex justify-between">
+  <dt class="text-sm font-medium text-gray-500">{label}</dt>
+  <dd class="text-sm text-gray-900">{value}</dd>
+</div>
